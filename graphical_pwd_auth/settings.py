@@ -79,8 +79,11 @@ WSGI_APPLICATION = 'graphical_pwd_auth.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+         'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Graphical_Password',
+        'USER':'postgres',
+        'PASSWORD':'Shankar@198314',
+        'HOST':'localhost'
     }
 }
 
@@ -135,10 +138,15 @@ TBA = 3
 # login redirect to <name_of_url>
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
-
+# EMAIL_USER='palaganigowrishankar8@gmail.com'
+# EMAIL_PASS ='ytjopgscmebretiw'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
+# EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+EMAIL_HOST_USER = 'palaganigowrishankar8@gmail.com'
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
+EMAIL_HOST_PASSWORD = 'ytjopgscmebretiw'
+
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
